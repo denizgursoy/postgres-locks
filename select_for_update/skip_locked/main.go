@@ -32,9 +32,9 @@ func main() {
 		}
 	}()
 
-	fmt.Println("Adding new values")
+	fmt.Println("Adding a new order")
 	if _, err := connection.Exec("INSERT INTO orders(customer_id, total_amount)VALUES (1, 8.3);"); err != nil {
-		log.Fatalf("Error adding new values: %v", err)
+		log.Fatalf("Error adding the new order: %v", err)
 	}
 
 	fmt.Println("Another transaction is trying get the locks on the unlocked records")
