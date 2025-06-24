@@ -45,5 +45,4 @@ func main() {
 	}
 	fmt.Println("Second query is able to read the new record because there is no lock")
 	fmt.Printf("%d orders are selected\n", len(orders))
-	time.Sleep(6 * time.Second)
 }
