@@ -39,7 +39,6 @@ func main() {
 
 	fmt.Println("Another transaction is trying get the locks on the unlocked records")
 	fmt.Println("It will try to select and records are locked therefore it will not wait if the records are locked")
-	fmt.Println("It will try to select and records are locked therefore it will not wait if the records are locked")
 	if err := connection.Select(&orders, `SELECT * FROM orders WHERE customer_id=1 FOR UPDATE SKIP LOCKED`); err != nil {
 		log.Fatalf("Error locking the orders the customer 1 from another transaction: %v", err)
 	}
